@@ -13,7 +13,7 @@ REACTJS + REDUX frontend integrated to a ready to deploy SPRINGBOOT backend
 **What about integration of frontend and backend?**<br>
 **What about deployment?**<br>
 
-<p> 
+<p>
 These are the reason why i have created this project template and the project TRANSDEV (transverse development).
 Following technologies stack have been integrated:
 </p>
@@ -21,7 +21,7 @@ Following technologies stack have been integrated:
 * Frontend: ReactJS + Redux + Router + more than 100 components
 * Backend: SpringBoot 2.3, JAVA 16, Docker with misc functionalities
 
-## Usage 
+## Usage
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ npm create-react-app your-project-name --template transdev-base-reactui-template
 Generate full stack JAVA application:
 
 ```
-mvn archetype:generate  -DarchetypeGroupId=io.github.jsoagger -DarchetypeArtifactId=transdev-archetype -DgroupId=myapp -DartifactId=myapp -DinteractiveMode=false 
+mvn archetype:generate  -DarchetypeGroupId=io.github.jsoagger -DarchetypeArtifactId=transdev-archetype -DgroupId=myapp -DartifactId=myapp -DinteractiveMode=false -DarchetypeVersion=LATEST
 ```
 
 Build the project:
@@ -54,23 +54,22 @@ Build the project:
 mvn clean install -Pjib
 ```
 
-Run:
+Above command will generate an image named: transdev/myproject:1.0-SNAPSHOT
+
+Run an instance of this image, will need access to a postgresql database:
 
 ```
-mvn 
+docker run --rm --name myproject transdev/myproject:1.0-SNAPSHOT
 ```
 
-## Deploy to GCP
+## Deploy docker image to GCP
 
 
-## Deploy to AWS
+## Deploy docker image to AWS
 
 
 ## Feedback
 
-
+Please feel free to contact me for any feedback: rmvonji@gmail.com
 
 ## Thank you
-
-
-
