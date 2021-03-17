@@ -1,8 +1,8 @@
 
-# A quickstart REACTJS + REDUX frontend integrated to a ready to deploy Springboot Backend
+# REACTJS + REDUX frontend integrated to a ready to deploy SPRINGBOOT backend
 
 
-## Motivation
+## Motivations
 
 
 
