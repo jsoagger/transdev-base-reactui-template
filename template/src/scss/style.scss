@@ -1,0 +1,30 @@
+// If you want to override variables do it here
+@import "variables";
+@import "ie-fix";
+
+
+html {
+	-webkit-font-smoothing: antialiased!important;
+	-moz-osx-font-smoothing: grayscale!important;
+	-ms-font-smoothing: antialiased!important;
+	overflow: auto;
+}
+
+body{
+	font-family: "Open Sans", sans-serif;
+	font-size: 13px;
+	color:#333;
+
+	--input-color: #99A3BA;
+	--input-border: #CDD9ED;
+	--input-background: #fff;
+	--input-placeholder: #CBD1DC;
+	--input-border-focus: #275EFE;
+	margin: 0;
+	padding: 0;
+}
+
+@import "./bootstrap.scss";
+@import "./core.scss";
+@import "./spinners.scss";
+

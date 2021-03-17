@@ -1,0 +1,6 @@
+{
+  "name": "GenericHomeLayout",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./GenericHomeLayout.js"
+}

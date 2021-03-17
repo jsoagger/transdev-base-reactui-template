@@ -1,0 +1,6 @@
+{
+  "name": "PeopleRegister",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PeopleRegister.js"
+}

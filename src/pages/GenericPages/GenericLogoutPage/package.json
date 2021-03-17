@@ -1,0 +1,6 @@
+{
+  "name": "GenericLogoutPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./GenericLogoutPage.js"
+}

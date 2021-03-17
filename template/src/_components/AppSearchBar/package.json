@@ -1,0 +1,6 @@
+{
+  "name": "AppSearchBar",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AppSearchBar.js"
+}
