@@ -5,14 +5,13 @@ REACTJS + REDUX frontend integrated to a ready to deploy SPRINGBOOT backend
 ## Motivations
 
 
-<p>Starting a fullstack JAVA project from scratch is painfull, time consuming and very complex. You have to do same things again and again for each new project.</p>
+<p>Starting a full stack JAVA project from scratch is painfull, time consuming and very complex. You have to do same things again and again for each new project.</p>
 
-<p>
-**What about generating fullstack JAVA projects from template?**<br>
+
+**What about generating full stack JAVA projects from template?**<br>
 **What about reusing components and capitalisation?**<br>
 **What about integration of frontend and backend?**<br>
 **What about deployment?**<br>
-</p>
 
 <p> 
 These are the reason why i have created this project template and the project TRANSDEV (transverse development).
@@ -42,9 +41,9 @@ npm create-react-app your-project-name --template transdev-base-reactui-template
 ```
 
 
-### Fullstack application
+### Full stack application
 
-Generate fullstack JAVA application:
+Generate full stack JAVA application:
 
 ```
 mvn archetype:generate  -DarchetypeGroupId=io.github.jsoagger -DarchetypeArtifactId=transdev-archetype -DgroupId=myapp -DartifactId=myapp -DinteractiveMode=false 
