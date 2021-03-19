@@ -1,6 +1,10 @@
+frontworking/
+frontworking/**/*
+
 # Compiled class file
 *.class
-
+*.iml
+.idea/
 # Log file
 *.log
 
@@ -11,7 +15,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
@@ -36,21 +40,25 @@ volumes/*.*
 docker/data/*.*
 env_file
 *docker*.env
+dockerfiles/datapatchs/foundation/1.0.1/dev
 _env/*.*
 
-*.mv.db
+dockerfiles/datapatchs/foundation/1.0.1/dev/*
+dockerfiles/datapatchs/foundation/1.0.1/dev/*.*
 
 
-# nodes modules
-node_modules/
-node_modules/*.*
-node/
-build/
+#data patchs tobe loaded in dev environment
+dockerfiles/datapatchs/localTargetDatas/**
+dockerfiles/datapatchs/localTargetDatas/*.*
+localTargetDatas/**
+localTargetDatas/*.*
 
-# nodes modules
-frontend/node_modules/
-frontend/node_modules/*.*
-frontend/node/
-frontend/build/
- 
- 
+#local confs
+local/
+local/*.*
+local/**
+env/local
+env/local/*.*
+env/local/*
+
+**/*package-lock.json

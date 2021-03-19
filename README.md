@@ -31,45 +31,48 @@ Following tools must be installed:
 * Docker desktop
 * Maven 3.4
 * NodeJS
-
-### Frontend UI only
-
-If you have an existing project and want to update the UI part:
-
-```
-npm create-react-app your-project-name --template transdev-base-reactui-template
-```
+* postgresSQL
 
 
-### Full stack application
+### Generate full stack application
 
-Generate full stack JAVA application:
+1. Generate the application
 
 ```
-mvn archetype:generate  -DarchetypeGroupId=io.github.jsoagger -DarchetypeArtifactId=transdev-archetype -DgroupId=myapp -DartifactId=myapp -DinteractiveMode=false -DarchetypeVersion=LATEST
+> mvn archetype:generate  -DarchetypeGroupId=io.github.jsoagger -DarchetypeArtifactId=transdev-archetype -DgroupId=myapp -DartifactId=myapp -DinteractiveMode=false -DarchetypeVersion=LATEST
 ```
 
-Build the project:
-```
-mvn clean install -Pjib
-```
-
-Above command will generate an image named: transdev/myproject:1.0-SNAPSHOT
-
-Run an instance of this image, will need access to a postgresql database:
+2. Build and generate a docker image:
 
 ```
-docker run --rm --name myproject transdev/myproject:1.0-SNAPSHOT
+> mvn clean install -Pnpm-install,create-react-app,jib
 ```
 
-## Deploy docker image to GCP
+3. Run instance of postgresSQL and create a database named 'core_app_db':
 
+```
+> docker network create test_network
+> docker run -d --name postgres --network test_network -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres postgres
+```
 
-## Deploy docker image to AWS
+4. Run the docker image application and browse: http://localhost:8080/jsoagger
 
+```
+> export CONFIG=${PWD}/src/main/resources
+> docker run --rm --name mycoreproject --network test_network -p 8080:8080 -v $CONFIG:/spring-config -e JAVA_TOOL_OPTIONS="-Dspring.config.location=/spring-config/application.properties" transdev/coreproject:1.0-SNAPSHOT
+```
+
+5. Start ReactJS UI local server:
+
+```
+> cd frontworking
+> REACT_APP_CONTEXT_ROOT=jsoagger npm start
+```
 
 ## Feedback
 
 Please feel free to contact me for any feedback: rmvonji@gmail.com
 
 ## Thank you
+
+Enjoy It!

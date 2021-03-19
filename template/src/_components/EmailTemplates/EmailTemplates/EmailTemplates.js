@@ -8,7 +8,7 @@ import {AutoScrollDataTable,
 }
 from '_components';
 import { connect } from 'react-redux';
-import { enTemplateService } from 'entemplates.services.js';
+import { enTemplateService } from '_services/entemplates.services.js';
 import { containerService } from '_services/container.services.js';
 import {commons} from '_helpers/commons.js';
 import { Form } from 'react-bootstrap'
@@ -259,7 +259,7 @@ class EmailTemplates extends Component {
 		if(e) e.preventDefault()
 		this.props.history.push(coreUri.mailTemplatesAdminUri(id));
 	}
-	
+
 	/**
 	 * Generates href with link to details view
 	 */
